@@ -33,31 +33,9 @@ Resources:
   weather:
     Type: AWS::Serverless::Function
     Properties:
-      InlineCode: "const http = require('https')\nexports.handler = async (event)\
-        \ => {\n    return httprequest().then((data) => {\n        const response\
-        \ = {\n            statusCode: 200,\n            headers: {\n            \"\
-        Access-Control-Allow-Headers\" : \"Access-Control-Allow-Methods, Access-Control-Allow-Headers,\
-        \ Access-Control-Allow-Origin, Origin,Accept, X-Requested-With, Content-Type,\
-        \ Access-Control-Request-Method, Access-Control-Request-Headers\",\n     \
-        \       \"Access-Control-Allow-Origin\": \"*\",\n            \"Access-Control-Allow-Methods\"\
-        : \"OPTIONS,POST,GET\"\n        },\n            body: JSON.stringify(data),\n\
-        \        };\n    return response;\n    });\n};\nfunction httprequest() {\n\
-        \     return new Promise((resolve, reject) => {\n        const options = {\n\
-        \            host: 'api.openweathermap.org',\n            path: '/data/2.5/weather?q=Tulsa&units=Imperial&appid=92c778350883d551ce42f1cabbba902c',\n\
-        \            port: 443,\n            method: 'GET'\n        };\n        const\
-        \ req = http.request(options, (res) => {\n          if (res.statusCode < 200\
-        \ || res.statusCode >= 300) {\n                return reject(new Error('statusCode='\
-        \ + res.statusCode));\n            }\n            var body = [];\n       \
-        \     res.on('data', function(chunk) {\n                body.push(chunk);\n\
-        \            });\n            res.on('end', function() {\n               \
-        \ try {\n                    body = JSON.parse(Buffer.concat(body).toString());\n\
-        \                } catch(e) {\n                    reject(e);\n          \
-        \      }\n                resolve(body);\n            });\n        });\n \
-        \       req.on('error', (e) => {\n          reject(e.message);\n        });\n\
-        \       req.end();\n    });\n}\n"
       Handler: index.handler
       Runtime: nodejs12.x
-      CodeUri: s3://voicefoundry123/4fe448ecebea6f6d4c0b639bba8bf2bb
+      CodeUri: s3://voicefoundry123/67acf1b1e2308b31d3888e3eea1dbf01
       Description: Weather
       MemorySize: 512
       Timeout: 10
