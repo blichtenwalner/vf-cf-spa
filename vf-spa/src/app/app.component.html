@@ -1,7 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="center-div">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Tulsa, OK Current Temp</mat-card-title>
+      <mat-card-subtitle>As of {{today | date:'h:mm a z'}}</mat-card-subtitle>
+    </mat-card-header>
+      <mat-card-content>
+         <div style="text-align: center;"><strong>{{weather.main.temp}} &#176;</strong></div>
+        <div style="text-align: center;">Feels like {{weather.main.feels_like}} &#176;</div>
+      </mat-card-content>
+  </mat-card>
 </div>
-<div>Current temp for Tulsa {{weather.main.temp}}</div>

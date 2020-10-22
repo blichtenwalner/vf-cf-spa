@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
- // apiEndpoint: 'https://uoz267kuoe.execute-api.us-east-2.amazonaws.com/default/weather'
+  // apiEndpoint: 'https://giq9n3zmih.execute-api.us-east-1.amazonaws.com/test/weather2'
   apiEndpoint: '${API_ENDPOINT}'
 };
 

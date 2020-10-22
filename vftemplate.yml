@@ -61,7 +61,7 @@ Resources:
     Properties:
       Layers:
         - !GetAtt DeploymentLayer.Outputs.Arn
-      CodeUri: ./vf-spa/dist/voice
+      CodeUri: ./vf-spa/dist/vf-spa
       AutoPublishAlias: live
       Runtime: python3.6 
       Handler: deployer.resource_handler

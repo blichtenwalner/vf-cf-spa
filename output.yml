@@ -35,7 +35,7 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs12.x
-      CodeUri: s3://voicefoundry123/67acf1b1e2308b31d3888e3eea1dbf01
+      CodeUri: s3://voicefoundry123/e1c1531898c8b3915a9572fb6c2283d3
       Description: Weather
       MemorySize: 512
       Timeout: 10
@@ -61,7 +61,7 @@ Resources:
       - Fn::GetAtt:
         - DeploymentLayer
         - Outputs.Arn
-      CodeUri: s3://voicefoundry123/bc038958de88f3f6ce08fc5990244570
+      CodeUri: s3://voicefoundry123/88ad0393196dd8f090f68105ce908d31
       AutoPublishAlias: live
       Runtime: python3.6
       Handler: deployer.resource_handler
