@@ -40,7 +40,6 @@ Resources:
         Weather
       MemorySize: 512
       Timeout: 10
-      Role: 'arn:aws:iam::575473820147:role/service-role/weather-role-1zekfdcw'
       Events:
         Api1:
           Type: Api
